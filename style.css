@@ -1,24 +1,32 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #2a2e53;
+    background-color: #20213c;
     margin: 0;
     padding: 0;
   }
   .container{
     text-align: center;
+    margin-inline: 5vw;
+    background-color: #2a2e53;;
+    border-radius: 50px;
   }
   .container>h1{
     color:#ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    margin-top: 5vh;
+    padding-top: 3vh;
   }
   .add-city{
     display: flex;
     justify-content: center;
     margin-block: 5vh;
+    margin-bottom: 10vh;
   }
   #cityInput{
     width:40%;
     padding: 1vw;
-    margin-right: 4vw;
+    margin-right: 1vw;
     border-radius: 20px;
     background-color: #26294b;
     order: 1px solid #030730;
@@ -35,45 +43,12 @@ body {
     cursor: pointer;
   }
   
-  /* .container {
-    margin: 20px auto;
-    padding: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-  }
-  .container>h1{
-    text-align: center;
-  }
-  
-  .add-city {
-    display: flex;
-    margin-bottom: 20px;
-    margin-inline:30%;
-  }
-  
-  .add-city input {
-    flex: 1;
-    padding: 10px;
-    padding-block: 20px;
-    background-color: #26294b;
-    border: 1px solid #030730;
-    border-radius: 5px 0 0 5px;
-  }
-  
-  .add-city button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-  } */
-  
-  /* Update the weather-cards class to use grid layout */
-  .weather-cards {
+   .weather-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
     gap: 10px; /* Gap between grid items */
     justify-content: center;
+    margin-inline: 5vw;
   }
   
   .weather-card {
@@ -86,7 +61,6 @@ body {
     padding: 10px;
     background-image: url('./photos/Rectangle\ 1.png');
     background-repeat: no-repeat;
-    /* border: 1px solid #ccc; */
     border-radius: 5px;
     color: #ffffff;
   }
@@ -100,19 +74,29 @@ body {
     font-weight: 500;
     margin: 0px;
   }
+  .weather-details> p:nth-child(2){
+    color: rgba(255, 255, 255, 0.715);
+  }
   .weather-icon-container{
     display: flex;
     flex-direction: column;
   }
   .weather-icon-container>img{
-    margin-top: -50px;
+    margin-top: -30px;
   }
   .weather-icon-container>p{
     text-align: center;
     font-weight: 500;
   }
+
+  @media screen and (max-width: 1160px){
+    .weather-cards {
+        /* On medium screens, show two column */
+        grid-template-columns: repeat(2, 1fr);
+      }
+}
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     .container {
       max-width: 100%;
     }
@@ -120,6 +104,13 @@ body {
     .weather-cards {
       /* On smaller screens, show one column */
       grid-template-columns: 1fr;
+      padding-inline:50%;
+      margin-left:0px;
+    }
+    h1{
+        font-size: 30px;
     }
   }
+
+ 
   

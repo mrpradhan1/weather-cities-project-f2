@@ -24,7 +24,7 @@ function displayWeatherCard(data) {
   weatherDetails.classList.add('weather-details');
   weatherDetails.innerHTML = `
   <p>${data.main.temp.toFixed(1)}°</p>
-  <p>H: ${data.main.temp_max.toFixed(1)}°C L: ${data.main.temp_min.toFixed(1)}°C</p>
+  <p>H: ${data.main.temp_max.toFixed(1)}° L: ${data.main.temp_min.toFixed(1)}°</p>
   <p></p>
   <p>${data.name}, ${data.sys.country}</p>
   `;
