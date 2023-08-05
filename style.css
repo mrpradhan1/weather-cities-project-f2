@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2a2e53;
+    margin: 0;
+    padding: 0;
+  }
+  .container{
+    text-align: center;
+  }
+  .container>h1{
+    color:#ffffff;
+  }
+  .add-city{
+    display: flex;
+    justify-content: center;
+    margin-block: 5vh;
+  }
+  #cityInput{
+    width:40%;
+    padding: 1vw;
+    margin-right: 4vw;
+    border-radius: 20px;
+    background-color: #26294b;
+    order: 1px solid #030730;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  #addBtn{
+    padding-inline: 1.5vw;
+    color: white;
+    font-weight:600;
+    font-size: 15px;
+    background-color: #403570;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  /* .container {
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  .container>h1{
+    text-align: center;
+  }
+  
+  .add-city {
+    display: flex;
+    margin-bottom: 20px;
+    margin-inline:30%;
+  }
+  
+  .add-city input {
+    flex: 1;
+    padding: 10px;
+    padding-block: 20px;
+    background-color: #26294b;
+    border: 1px solid #030730;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .add-city button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  } */
+  
+  /* Update the weather-cards class to use grid layout */
+  .weather-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    gap: 10px; /* Gap between grid items */
+    justify-content: center;
+  }
+  
+  .weather-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 175px;
+    width: 315px;
+    padding: 10px;
+    background-image: url('./photos/Rectangle\ 1.png');
+    background-repeat: no-repeat;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    color: #ffffff;
+  }
+  
+  
+  .weather-details {
+    text-align: left;
+  }
+  .weather-details> p:first-child{
+    font-size: 45px;
+    font-weight: 500;
+    margin: 0px;
+  }
+  .weather-icon-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .weather-icon-container>img{
+    margin-top: -50px;
+  }
+  .weather-icon-container>p{
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container {
+      max-width: 100%;
+    }
+  
+    .weather-cards {
+      /* On smaller screens, show one column */
+      grid-template-columns: 1fr;
+    }
+  }
+  
